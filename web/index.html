@@ -1,0 +1,66 @@
+<style>
+.console-window {
+  width: 100%;
+  height: 400px;
+  overflow: scroll;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+
+  font-size: 10pt;
+  font-family: monospace;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: row;
+}
+
+#c {
+  margin: 10px;
+}
+
+.ui-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.console-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.console-container > div {
+  width: 100%;
+}
+
+</style>
+
+<div class="main-section">
+  <canvas id="c"></canvas>
+  <div class="ui-section" id="app-ui">
+  </div>
+</div>
+<br>
+
+<div class="console-container">
+  <div>
+    <b>Main Log</b>
+    <div class="console-window" id="main-logger">
+    </div>
+  </div>
+
+  <div>
+    <b>UI Log</b>
+    <div class="console-window" id="ui-logger">
+    </div>
+  </div>
+
+  <div>
+    <b>3D Log</b>
+    <div class="console-window" id="threejs-logger">
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
